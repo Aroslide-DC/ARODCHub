@@ -33,11 +33,6 @@ anti-impersonation check (the stated nickname must match the validated one; the 
 Anti-freeze architecture
 This is the central point of the project.
 
-A single dedicated thread (THubServer, derived from TThread) performs all socket I/O operations.
-Sockets are non-blocking and monitored by WSAPoll — not select, whose FD_SETSIZE limit (64) would have prevented exceeding 64 sockets.
-The VCL thread never performs network I/O or waits.
-No TThread.Synchronize: this would block the network thread while waiting for the main thread to process a message, which is exactly the mechanism that freezes classic hubs under load.
-Instead:
 log messages are queued in a thread-safe queue (TLogQueue, bounded queue);
 the interface drains them in limited batches via a TTimer (300 ms);
 the log TMemo is capped;
