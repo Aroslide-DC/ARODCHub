@@ -32,9 +32,3 @@ maximum configurable number of users (200 by default);
 anti-impersonation check (the stated nickname must match the validated one; the address announced via $ConnectToMe must match the sender’s real IP).
 Anti-freeze architecture
 This is the central point of the project.
-
-log messages are queued in a thread-safe queue (TLogQueue, bounded queue);
-the interface drains them in limited batches via a TTimer (300 ms);
-the log TMemo is capped;
-the user TListView is rebuilt only when the user version counter changes;
-the UI reads only copies/snapshots (TUserManager.Snapshot), never the live shared state used by the network thread.
