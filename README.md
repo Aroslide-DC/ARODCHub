@@ -1,7 +1,7 @@
  # ARODCHub
 
 
-A Direct Connect hub compatible with NMDC and ADC, written in Object Pascal (Delphi 11 / Studio 22.0), targeting Win32, and compilable with dcc32.
+A Direct Connect hub compatible with NMDC and ADC, written in Object Pascal, targeting Win64, and compilable with dcc64.
 
 AroDCHUB is inspired by PtokaX while remaining a compact and readable project. Its main goal is to remain perfectly responsive even under very heavy traffic: all network input/output is handled outside the VCL thread.
 
