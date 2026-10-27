@@ -32,3 +32,13 @@ maximum configurable number of users (200 by default);
 anti-impersonation check (the stated nickname must match the validated one; the address announced via $ConnectToMe must match the sender’s real IP).
 Anti-freeze architecture
 This is the central point of the project.
+
+
+<img width="1160" height="832" alt="image" src="https://github.com/user-attachments/assets/72ae9b70-e819-4267-8130-debf459acef6" />
+
+
+
+
+
+
+
